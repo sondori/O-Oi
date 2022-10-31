@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { font-family: 'Noto Sans KR', sans-serif;}
+
+*{margin: 0; padding: 0;  font-family: 'Noto Sans KR', sans-serif;}
+ul{list-style: none;}
+a{text-decoration: none; color: #000;}
+/* 네비설정부분 */
+.nav{width: 100%;}
+.nav-wrap{width: 100%; margin: 0 auto; display: flex; justify-content: center; gap: 10px; height: 60px; background-color: #fff;}
+.nav ul{ width: 400px; display: flex;   justify-content: space-between; gap: 5px; }
+.nav ul li a{line-height: 60px; letter-spacing: -1px;}
+.nav .nav-logo img{width: 80px; margin-top: 15px; padding: 0 100px;}
+
+/* 배너설정부분 */
+.banner{width: 100%; display: flex; position: relative;}
+.banner img{width: 100%; position: relative; transition: .3s; opacity: 0.8;}
+.banner img:hover{opacity: 1;}
+.banner p.on{display: block;}
+.banner p{position: absolute; top: 50%; font-size: 50px; letter-spacing: -3px; font-weight: 100; display: none; color: #515151;}
+.banner .man p{right: 20px;}
+.banner .woman p{left: 20px;}
+
+/* 시그니처설정부분 */
+.signature{width: 100%; margin-top: 200px;} 
+.signature .signature-wrap{max-width:1200px; margin: 0 auto;}
+/* 타이틀 */
+
+.signature .title h1{font-weight: 100; letter-spacing: -2px;}
+.signature .title h1 span{margin-left: 10px; font-weight: 700; font-size: 40px;}
+.signature .title p{color: #8e8e8e; margin-top: 10px; margin-bottom: 30px; font-size: 18px; font-weight: 300;letter-spacing: -1px; color: #515151;}
+/* 시그니처-top 부분 */
+.signature .top .txt{ text-align: center; margin-top: 200px; color: #515151;}
+.signature .top{ max-width:1200px; display: flex; justify-content: space-between;}
+.signature .s-banner{max-width:1200px;}
+.signature .s-banner img{width: 100%;}
+/* 시그니처-bottom 부분 */
+.signature .bottom{max-width:1200px; display: flex; justify-content: space-between; margin-top: 50px; gap: 50px;}
+.signature .main .s-content{width: 100%; position: relative; flex-basis: 25%;}
+.signature .main .s-content img{position: absolute; width: 100%; height: auto; transition: .3s; }
+.signature .main .s-content img:nth-child(2){opacity: 0;}
+.signature .main .s-content:hover img:nth-child(2){opacity: 1;}
+
+/* by oioi 구간 */
+.by-oioi{width: 100%; margin-top: 550px;}
+.by-oioi .by-oioi-wrap{max-width: 1200px; margin: 0 auto;}
+.by-oioi .title{width: 100%; text-align: right;}
+/* ---- 배너 설정 */
+.by-oioi .oioi-banner{ max-width: 1200px; display: flex; gap: 15px; justify-content: space-between; margin-top: 40px; overflow: hidden;}
+.by-oioi .oioi-banner img{width: 100%;}
+.by-oioi  .title h1{font-weight: 100; letter-spacing: -3px; margin-bottom: 10px;}
+.by-oioi .title h1 span{font-weight: 700; margin-left: 20px; font-size: 40px;}
+.by-oioi .title p{color: #8e8e8e;font-size: 18px; font-weight: 300;letter-spacing: -1px; color: #515151;}
+
+.by-oioi .bottom{max-width:1200px; display: flex; justify-content: space-between; margin-top: 50px; gap: 10px; margin-top: 80px;}
+.by-oioi .main .o-content{width: 100%; position: relative;}
+.by-oioi .main .o-content img{ width: 100%; position: absolute;}
+.by-oioi .main .o-content img:nth-child(2){opacity: 0;}
+.by-oioi .main .o-content:hover img:nth-child(2){opacity: 1;}
+
+.collection{width: 100%; margin-top: 500px; margin-bottom: 200px;} 
+.collection .collection-wrap{max-width: 1000px; margin: 0 auto; overflow: hidden; position: relative;}
+.collection .collection-wrap .title{width: 100%; text-align: center;}
+.collection .collection-wrap .title h1{color: #515151;}
+.collection .collection-wrap .title span{color: #000;}
+.collection .menu{width: 100%;}
+.collection .menu ul{display: flex; justify-content: center;gap: 30px; margin-top: 20px; margin-bottom: 30px;}
+.collection .menu ul li{text-align: center;}
+.collection .menu ul li a{font-size: 20px; letter-spacing: -1.5px; position: relative; color: #d1d1d1;  transition: .5s;}
+.collection .menu ul li:nth-child(1) a::after{content: ""; position: absolute; width: 2px; height: 20px; background-color: #d1d1d1; bottom: 5px; left: 45px;}
+.collection .menu ul li a.on{color: #515151;}
+.collection  .oioi-content .swiper-wrapper{ max-width: 1200px; display: flex; }
+/* .collection .swiper-wrapper{width: 1000px;} */
+.collection  .oioi-content{display: none;}
+.collection .swiper-wrapper .swiper-slide img{
+    width: 1000px;
+
+}
+
+.collection .by-oioi{margin-top: -10px;}
+
+.footer{width: 100%; height: 150px; background-color: #515151;}
+
+@media screen and (max-width:1200px) {
+    .nav{max-width: 1200px;}
+    .nav-wrap{gap: 15px; height: 60px; background-color: #fff;}
+    .nav ul{display: flex; justify-content: space-between; width: 350px;}
+    .nav ul li{padding: 0 5px;}
+    .nav .nav-logo{padding: 0px 5px;}
+}
+
+
+@media screen and (max-width:640px) {
+    /* nav 설정 */
+    .nav .nav-right{display: none;}
+    .nav .nav-left{display: none;}
+    .nav-btn{position: absolute; top: 10px; right: 0; z-index: 9;}
+    .nav-btn .line{width: 30px; height: 3px; background-color: #000; margin-bottom: 
+    10px;}
+/* 시그니처 타이틀 설정 */
+.signature{max-width: 640; margin-top: 200px;} 
+.signature .signature-wrap{max-width:640px; margin: 0 auto;}
+.signature .title {text-align: center;}
+.signature .title h1{font-size: 20px;}
+.signature .title h1 span{ font-size: 30px;}
+.signature .title p{font-size: 15px;}
+/* 시그니처-top 부분 */
+.signature .top{ max-width:640px; display: block;}
+.signature .top .txt{margin-top: 50px;}
+.signature .s-banner{max-width:640px;}
+.signature .s-banner img{width: 100%;}
+/* 시그니처-bottom 부분 */
+.signature .bottom{ max-width:640px; gap: 0; flex-wrap: wrap; margin-top: 50px;}
+.signature .main .s-content{flex-basis: 40%; height: 260px; margin-bottom: 130px;}
+
+.by-oioi{width: 100%; margin-top: 150px;}
+        /* by oioi 구간 */
+.by-oioi .by-oioi-wrap{max-width: 640px; margin: 0 auto;}
+.by-oioi .title{width: 100%; text-align: center;}
+/* ---- 배너 설정 */
+.by-oioi .oioi-banner{display: block;}
+.by-oioi  .title h1{font-size: 20px; letter-spacing: -1px;}
+.by-oioi .title h1 span{ font-size: 30px;}
+.by-oioi .title p{color: #8e8e8e;font-size: 15px;}
+/* by-oioi-bottom 부분 */
+.by-oioi .bottom{max-width:640px;}
+.by-oioi .main .o-content{max-width: 640px; position: relative;}
+.by-oioi .main .o-content img{ width: 100%; position: absolute;}
+.by-oioi .main .o-content img:nth-child(2){opacity: 0;}
+.by-oioi .main .o-content:hover img:nth-child(2){opacity: 1;}
+
+.by-oioi .bottom{ max-width:640px; display: flex; grid-area: 0; flex-wrap: wrap; margin-bottom: 80px; }
+.by-oioi .main .o-content{flex-basis:48%;  height: 260px;}
+
+
+
+
+
+.collection{max-width: 640px; margin-top: 200px; margin-bottom: 200px;} 
+.collection .collection-wrap{max-width: 640px; margin: 0 auto; overflow: hidden; position: relative;}
+.collection  .oioi-content .swiper-wrapper{ max-width: 640px; display: flex; }
+.collection .swiper-wrapper .swiper-slide img{ width: 500px; flex-basis: 640px;}
+
+
+
+}
+
+
+
+
+
+
